@@ -1,0 +1,4 @@
+name: Nemesis-TG
+version: 1.0
+main: me.ogricanx.nemesis.tg.main.Main
+depend: [WorldEdit, WorldGuard]

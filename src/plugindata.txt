@@ -1,0 +1,47 @@
+Commands:
+  testgelände.backup
+  testgelände.backup.load
+  
+  testgelände.block.<n/s>
+  testgelände.block.mini.<n/s>
+  
+  testgelände.create.<name>
+  
+  testgelände.set.<tg>. ...
+  
+  testgelände.paste.<schematic>
+  testgelände.paste.<n/s>.<schematic>
+  
+  testgelände.teleport.[tg]
+  
+  testgelände.list
+  
+[ testgelände ]
+
+  testgelände.reset
+  
+  testgelände.select
+  
+  help.testgelände
+  testgelände.help
+  
+  testgelände.undo
+  
+  testgelände.tnt
+  testgelände.tnt.allow
+  testgelände.tnt.deny
+
+
+Permissions:
+  nemesis.tg.backup
+  nemesis.tg.block
+  nemesis.tg.create
+  nemesis.tg.edit
+  nemesis.tg.paste
+  nemesis.tg.tp
+  nemesis.tg.list
+  nemesis.tg.clear
+  nemesis.tg.select
+  nemesis.tg.tnt
+  nemesis.tg.help
+  nemesis.tg.undo
