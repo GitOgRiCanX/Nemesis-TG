@@ -19,24 +19,23 @@ public class CreateCommand {
 			 usage = "/help Nemesis-TG",permission = "nemesis.tg.create",description = "Erstellt eine Testgelände an deiner Position.", inGameOnly = true)
 	public void tgCreate(CommandArgs args) {
 		
-		
 		switch (args.getArgs().length) {
 		case 0:
 			args.getSender().sendMessage(Main.preferr + "/testgelände create <name>");
 			break;
 		case 1:
-			if (Testgelände.doTestgeländeExists(args.getArgs(0), m)) {
+			if (Testgelände.doTestgeländeExists(args.getArgs(0).toLowerCase(), m)) {
 				args.getSender().sendMessage(Main.preferr + "Dieses Testgelände Existiert bereits!");
 				return;
 			}
 			
-			Testgelände a = new Testgelände(args.getArgs(0), args.getPlayer().getLocation());
+			Testgelände a = new Testgelände(args.getArgs(0).toLowerCase(), args.getPlayer().getLocation());
 			List<Testgelände> values = Testgelände.getValues(m);
 			values.add(a);
 			Testgelände.setValues(values, m);
 			m.saveConfig();
 			
-			args.getSender().sendMessage(Main.pref + "Testgelände " + args.getArgs(0) + " erfolgreich erstellt.");
+			args.getSender().sendMessage(Main.pref + "Testgelände " + args.getArgs(0).toLowerCase() + " erfolgreich erstellt.");
 			break;
 		default:
 			args.getSender().sendMessage(Main.preferr + "/testgelände create <name>");
